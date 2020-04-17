@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://maindev:maindev@trippeecluster-xgofp.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://maindev:maindev@trippeecluster-xgofp.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
 }
