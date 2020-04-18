@@ -26,7 +26,7 @@ router.post('/', [
         // Check validation of inputs
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.status(400).json({ errors: errors.array() })
+            return res.status(400).json({ errors: errors.array() });
         }
 
         const { name, email, password } = req.body;
@@ -36,7 +36,7 @@ router.post('/', [
             let user = await User.findOne({ email });
 
             if (user) {
-                return res.status(400).json({errors: [ { msg: 'User already exists'}] })
+                return res.status(400).json({errors: [ { msg: 'User already exists'}] });
             }
 
             // Get user gravatar
@@ -44,7 +44,7 @@ router.post('/', [
                 s: '200',
                 r: 'pg',
                 d: 'mm'
-            })
+            });
 
             // Create new user model
             user = new User({
@@ -67,7 +67,7 @@ router.post('/', [
                 user: {
                     id: user.id
                 }
-            }
+            };
 
             jwt.sign(
                 payload, 
@@ -75,7 +75,7 @@ router.post('/', [
                 { expiresIn: 3600 },
                 (err, token) => {
                     if (err) throw err;
-                    res.json({ token })
+                    res.json({ token });
                 }
             );
 
