@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://maindev:maindev@trippeecluster-xgofp.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret": "mysecrettoken"
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "f931946a85cf8355d195",
+    "githubSecret": "802621c546cfebdf58e97346dee87dfc51dc5eb6"
 }
