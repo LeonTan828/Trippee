@@ -227,6 +227,8 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
         }
 
         // Get remove index
+        // @NOTE may have mistake here
+        // should be index of comment id
         const removeIndex = post.comments
             .map(comment => comment.user.toString())
             .indexOf(req.user.id);
